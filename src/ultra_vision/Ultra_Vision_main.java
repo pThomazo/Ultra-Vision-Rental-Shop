@@ -142,7 +142,7 @@ public class Ultra_Vision_main extends JFrame {
 		setConnMan(new ConnectionManager());
 		
 	}
-	
+	//setting up the connection  with the database
 	
 	public ConnectionManager getConnMan() {
 		return connMan;
