@@ -8,16 +8,16 @@ public class ConnectionManager {
 	
 	//we may change the DB
 	public static final String URL = "jdbc:mysql://database-1.ckpglua8ft7e.eu-west-1.rds.amazonaws.com:3306/ultra_vision_rs?useTimezone=true&severTimezone=UTC";
-	private Connection con;
+	private Connection conn;
 	
 	//getting  connection from the database on AWS
 	public Connection getConnection() throws SQLException{
-		if(con==null) {
-			Connection con = null;
+		if(conn==null) {
+			Connection conn = null;
 			
 			try {
-				con = DriverManager.getConnection(URL,"admin", "CCT20201234!");
-				//con = DriverManager.getConnection(URL_Local,"root", "");
+				conn = DriverManager.getConnection(URL,"admin", "CCT20201234!");
+				//conn = DriverManager.getConnection(URL_Local,"root", "");
 			}
 			catch(SQLException e) {
 				e.printStackTrace();
@@ -26,11 +26,11 @@ public class ConnectionManager {
 				
 				throw e;
 			}
-			this.con = con;
+			this.conn = conn;
 		}
 		
 		//returning the connection status
-		return con;
+		return conn;
 	}
 
 }

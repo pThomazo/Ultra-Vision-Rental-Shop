@@ -14,7 +14,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import connection.ConnectionManager;
+import Connection.ConnectionManager;
 import java.awt.Component;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
