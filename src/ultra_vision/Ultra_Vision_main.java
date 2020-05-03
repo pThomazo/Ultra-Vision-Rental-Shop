@@ -58,19 +58,13 @@ public class Ultra_Vision_main extends JFrame {
 		
 		JMenuItem menuRegRent = new JMenuItem("Manage titles");
 		menuRegRent.addActionListener(new ActionListener(){
-			public void actionPerfomed(ActionEvent e) {
-				ManageTiltes mt = new ManageTitles(Ultra_Vision_main.this);
+			public void actionPerformed(ActionEvent e) {
+				ManageTitles mt = new ManageTitles(Ultra_Vision_main.this);
 				mt.setVisible(true);
 			}
 
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-			
 		});
-		menuArchive.add(registerCustomer);
+		menuArchive.add(menuRegRent);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Manage rents");
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
@@ -89,11 +83,23 @@ public class Ultra_Vision_main extends JFrame {
 		setContentPane(contentPane);
 		
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbc_btnManageTitles.Weighty = 1.0;
+		contentPane.setLayout(gbl_contentPane);
+		
+		JButton btnManageTitles = new JButton("Manage titles");
+		btnManageTitles.setBackground(new Color(255, 228, 196));
+		btnManageTitles.setBorder(new LineBorder(new Color(255, 99, 71),2,true));
+		btnManageTitles.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ManageTitles mt = new ManageTitles(Ultra_Vision_main.this);
+				mt.setVisible(true);
+			}
+		});
+		GridBagConstraints gbc_btnManageTitles = new GridBagConstraints();
+		gbc_btnManageTitles.weightx = 1.0;
 		gbc_btnManageTitles.fill = GridBagConstraints.BOTH;
 		gbc_btnManageTitles.insets = new Insets(4, 4, 5, 5);
 		gbc_btnManageTitles.weightx = 0.3;
-		gbc_btnManageTitles.dridx = 0;
+		gbc_btnManageTitles.gridx = 0;
 		gbc_btnManageTitles.gridy = 0;
 		contentPane.add(btnManageTitles, gbc_btnManageTitles);
 		
@@ -117,7 +123,7 @@ public class Ultra_Vision_main extends JFrame {
 		gbc_btManCustomers.weightx = 0.3;
 		gbc_btManCustomers.gridx = 1;
 		gbc_btManCustomers.gridy = 0;
-		contentPane.add(btManCustomer, gbc_btManCustomers);
+		contentPane.add(btManCustomers, gbc_btManCustomers);
 		
 		
 		JButton btnManageRents = new JButton ("Manage rents");
