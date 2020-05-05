@@ -30,6 +30,9 @@ public class Customer {
 		this.memberCard = memberCard;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return name;
+	}
 
 }
