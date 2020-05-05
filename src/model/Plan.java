@@ -4,7 +4,7 @@ public enum Plan {
 	
 	
 	
-	MusicLovers(cod: 0, name: "Music Lovers"), VideoLovers(cod: 1, name: "Video Lovers"), TVLovers(cod: 2, name: "TV Lovers"), Premium(cod: 3, name: "Preminum");
+	MusicLovers( 0, "Music Lovers"), VideoLovers( 1,  "Video Lovers"), TVLovers( 2,  "TV Lovers"), Premium( 3, "Preminum");
 	
 	public int cod;
 	public String name;

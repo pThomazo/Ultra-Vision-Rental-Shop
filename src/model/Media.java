@@ -2,7 +2,7 @@ package model;
 
 public enum Media {
 	
-	CD(cod: 0, name: "CD"), DVD(cod: 1, name "DVD"), BLURAY(cod: 2, name: "Blueray");
+	CD( 0,"CD"), DVD( 1, "DVD"), BLURAY( 2,"Blueray");
 	
 	int cod;
 	String name;
