@@ -25,8 +25,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
+import java.text.ParseException;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParseException;
 
 import model.Customer;
 import model.MembershipCard;
@@ -61,9 +61,7 @@ public class UpdateCustomerDialog extends JDialog {
 		contentPanel.setLayout(gbl_contentPanel);
 		//ten numbers 
 		MaskFormatter format = null;
-		
 		try {
-			
 			format = new MaskFormatter("##########");
 		}catch (ParseException e) {
 			e.printStackTrace();
@@ -87,7 +85,7 @@ public class UpdateCustomerDialog extends JDialog {
 					
 					if (cSel.getMemberCard() != null) {
 						cardNumberField.setText(cSel.getMemberCard().getCardNumber());
-						comboPlan.setSelectedcIndex(cSel.getMemberCard().getPlan().cod);
+						comboPlan.setSelectedIndex(cSel.getMemberCard().getPlan().cod);
 					}else {
 						System.err.println("Card not found");
 						cardNumberField.setText("");

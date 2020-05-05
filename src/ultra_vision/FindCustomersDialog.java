@@ -30,9 +30,9 @@ public class FindCustomersDialog extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextField fieldNameToSearch;
-	private Customer TableModel customers TableModel;
+	private CustomersTableModel customersTableModel;
 	private Ultra_Vision_main mF;
-	private JTable customers Table;
+	private JTable customersTable;
 	
 	//creating dialog.
 	
@@ -64,9 +64,9 @@ public class FindCustomersDialog extends JDialog {
 				String searchTerm = fieldNameToSearch.getText();
 				
 				try {
-					List<Customer> customers = executeCustomersFind(SearchTerm);
+					List<Customer> customers = executeCustomersFind(searchTerm);
 					//update the table with the titles found 
-					customers TableModel.setCustmers(customers);
+					customersTableModel.setCustomers(customers);
 				}catch(Exception e1) {
 					//All blocks catch automatically generated 
 					e1.printStackTrace();
@@ -119,7 +119,7 @@ public class FindCustomersDialog extends JDialog {
 	public void fillTable() {
 		try {
 			List<Customer> allCusto = executeCustomersFind(null);
-			customers TableModel.setCustomers(allCusto);
+			customersTableModel.setCustomers(allCusto);
 		}catch (Exception e) {
 			//all block catch automatically generated 
 			e.printStackTrace();
