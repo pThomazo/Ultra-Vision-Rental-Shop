@@ -6,22 +6,26 @@ import java.util.Set;
 
 public class Rent {
 	
+	//declaring in the class the variables
 	private Integer id;
 	private int userId;
 	private Date dateRent;
 	private Date dateReturn;
 	private Set<Title> titles = new HashSet<>();
 	
+	//constructor
 	public Rent(){
 		
 	}
-	
+	//constructor
 	public Rent (Integer id, Date dateRent, Date dateReturn, Set<Title> titles) {
 		this.id = id;
 		this.setDateRent(dateRent);
 		this.setDateReturn(dateReturn);
 		this.setTitles(titles);
 	}
+	
+	//creating get's and setter's
 	
 	public Integer getId() {
 		return id;
@@ -65,6 +69,7 @@ public class Rent {
 		titles.forEach((t) -> { sbTS.append(t.getName()).append(",");
 		
 		});
+		return sbTS.substring(0, sbTS.length()-1);
 	}
 
 }
