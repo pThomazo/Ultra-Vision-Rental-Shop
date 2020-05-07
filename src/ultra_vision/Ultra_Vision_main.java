@@ -21,9 +21,8 @@ import java.awt.Color;
 
 public class Ultra_Vision_main extends JFrame {
 	
-	/**
-	 * 
-	 */
+	
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private ConnectionManager connMan;
