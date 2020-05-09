@@ -38,7 +38,7 @@ public class FindCustomersDialog extends JDialog {
 	
 	public FindCustomersDialog(Ultra_Vision_main mFrame) {
 		this.mF = mFrame;
-		
+		//Setting window and parameter (Find customer)
 		setTitle("Find customers");
 		setBounds(100, 100, 561, 371);
 		getContentPane().setLayout(new BorderLayout());
@@ -50,6 +50,7 @@ public class FindCustomersDialog extends JDialog {
 		contentPanel.setLayout(gbl_contentPanel);
 		
 		{
+			//creating label name and adding it to the panel.
 			JLabel lblName = new JLabel("Name:");
 			GridBagConstraints gbc_lblName = new GridBagConstraints();
 			gbc_lblName.insets = new Insets(0, 0, 5, 5);
@@ -58,6 +59,7 @@ public class FindCustomersDialog extends JDialog {
 			contentPanel.add(lblName, gbc_lblName);
 		}
 		{
+			//creating the button search setting actionlistener to it 
 			JButton btnSearch = new JButton("Search");
 			btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
@@ -77,6 +79,7 @@ public class FindCustomersDialog extends JDialog {
 			getRootPane().setDefaultButton(btnSearch);
 			
 			{
+				//new JTextField 
 				fieldNameToSearch = new JTextField();
 				GridBagConstraints gbc_fieldNameToSearch = new GridBagConstraints();
 				gbc_fieldNameToSearch.gridwidth = 2;
@@ -97,9 +100,11 @@ public class FindCustomersDialog extends JDialog {
 	
 		}
 		{
+			//creating new customerTableModel
 			customersTableModel = new CustomersTableModel();
 			
 			{
+				//add a JScrollPane to have the option to go through options 
 				JScrollPane scrollPane = new JScrollPane();
 				GridBagConstraints gbc_scrollPane = new GridBagConstraints();
 				gbc_scrollPane.gridwidth = 6;

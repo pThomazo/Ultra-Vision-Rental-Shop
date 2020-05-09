@@ -39,7 +39,7 @@ public class CustomersTableModel extends AbstractTableModel {
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
 	Customer titleAtRow = customers.get(rowIndex);
-	
+	//getting return name, Id 
 	switch(columnIndex) {
 	case 0:
 		return titleAtRow.getId();
