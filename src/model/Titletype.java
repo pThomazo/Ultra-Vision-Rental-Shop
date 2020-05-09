@@ -3,7 +3,7 @@ package model;
 public enum Titletype {
 	
 
-	Music (cod: 0, name: "Music"), LiveConcert(cod: 1, name:  "Live concert"), Movie(cod: 2, name: "Movie"), BoxSet(cod: 3, name: "Box set");
+	Music ( 0, "Music"), LiveConcert(1, "Live concert"), Movie(2, "Movie"), BoxSet(3, "Box set");
 
 	//declaring the variables
 	public int cod;
