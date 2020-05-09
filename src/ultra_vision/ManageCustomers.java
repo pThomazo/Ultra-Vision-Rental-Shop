@@ -26,6 +26,7 @@ public ManageCustomers(Ultra_Vision_main mf) {
 	gridBagLayout.columnWeights = new double[] {0.0, 0.0, 0.0, Double.MIN_VALUE};
 	gridBagLayout.rowWeights = new double[] {0.0, Double.MIN_VALUE};
 	getContentPane().setLayout(gridBagLayout);
+	
 	//creating the new customer's button
 	JButton button = new JButton("New customer");
 	button.addActionListener(new ActionListener() {

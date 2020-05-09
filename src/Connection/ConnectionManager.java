@@ -6,7 +6,8 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 	
-	//we may change the DB
+	//Path to the database 
+	//creating connection  
 	public static final String URL = "jdbc:mysql://database-1.ckpglua8ft7e.eu-west-1.rds.amazonaws.com:3306/ultra_vision_rs?useTimezone=true&severTimezone=UTC";
 	private Connection conn;
 	

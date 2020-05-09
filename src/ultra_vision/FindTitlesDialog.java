@@ -36,12 +36,13 @@ public class FindTitlesDialog extends JDialog {
 	private Ultra_Vision_main mF;
 	private JTable titlesTable;
 
-	/**
-	 * Create the dialog.
-	 */
+	
+	 // Create the dialog.
+	 
 	public FindTitlesDialog(Ultra_Vision_main mFrame) {
 		this.mF = mFrame;
 
+		//Setting window and parameter (Find titles)
 		setTitle("Find titles");
 		setBounds(100, 100, 561, 371);
 		getContentPane().setLayout(new BorderLayout());
@@ -52,6 +53,7 @@ public class FindTitlesDialog extends JDialog {
 		gbl_contentPanel.rowWeights = new double[] { 0.0, 0.0, 1.0 };
 		contentPanel.setLayout(gbl_contentPanel);
 		{
+			//creating label name and adding it to the panel.
 			JLabel lblName = new JLabel("Name:");
 			GridBagConstraints gbc_lblName = new GridBagConstraints();
 			gbc_lblName.insets = new Insets(0, 0, 5, 5);
@@ -60,6 +62,7 @@ public class FindTitlesDialog extends JDialog {
 			contentPanel.add(lblName, gbc_lblName);
 		}
 		{
+			//creating the button search setting actionlistener to it
 			JButton btnSearch = new JButton("Search");
 			btnSearch.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -70,13 +73,14 @@ public class FindTitlesDialog extends JDialog {
 						// Update the table with the titles found
 						titlesTModel.setTitles(titlesFound);
 					} catch (Exception e1) {
-						// TODO Bloco catch gerado automaticamente
+						//  Block catch generated automatically 
 						e1.printStackTrace();
 					}
 				}
 			});
 			getRootPane().setDefaultButton(btnSearch);
 			{
+				//new JTextField 
 				fieldNameToSearch = new JTextField();
 				GridBagConstraints gbc_fieldNameToSearch = new GridBagConstraints();
 				gbc_fieldNameToSearch.gridwidth = 2;
@@ -94,6 +98,7 @@ public class FindTitlesDialog extends JDialog {
 			contentPanel.add(btnSearch, gbc_btnSearch);
 		}
 		{
+			//creating a new TitlesTableModel
 			titlesTModel = new TitlesTableModel();
 			{
 				JScrollPane scrollPane = new JScrollPane();
@@ -156,7 +161,7 @@ public class FindTitlesDialog extends JDialog {
 			Title titl;
 			while (rsTitl.next()) {
 				System.out.println("Found title");
-
+//setting bounder to set titles and get it as return 
 				titl = new Title();
 
 				titl.setId(rsTitl.getInt(1));
