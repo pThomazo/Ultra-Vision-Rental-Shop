@@ -17,6 +17,7 @@ public class ManageRents extends JDialog {
 		setBounds(0,0,432,288);
 		setLocationByPlatform(true);
 		
+		////setting the results in order column and rows 
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0};
@@ -24,6 +25,7 @@ public class ManageRents extends JDialog {
 		gridBagLayout.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		getContentPane().setLayout(gridBagLayout);
 		
+		//creating the new register rent's button
 		JButton button = new JButton("Register rent");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -32,6 +34,7 @@ public class ManageRents extends JDialog {
 				dRR.fillCombos();
 			}
 		});
+		//setting its position 
 		button.setBorder(new LineBorder(new Color(255, 99, 71), 2, true));
 		button.setBackground(new Color(255, 228, 196));
 		GridBagConstraints gbc_button = new GridBagConstraints();
@@ -43,6 +46,7 @@ public class ManageRents extends JDialog {
 		gbc_button.gridy = 0;
 		getContentPane().add(button, gbc_button);
 		
+		////new button to have the option of register a return
 		JButton button_1 = new JButton("Register return");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
